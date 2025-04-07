@@ -85,6 +85,8 @@ def main():
             print(f"[!] Исключение для {email}: {ex}")
             session.close()
 
+        time.sleep(random.randint(2, 5))
+
     with open(result_filename, "a", encoding="utf-8") as r_file:
         for line in success_results:
             r_file.write(f"{line}\n")
